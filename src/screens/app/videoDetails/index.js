@@ -60,7 +60,6 @@ const VideoDetail = (props) => {
     useEffect(() => {
         // Hide the status bar when the component mounts
         // StatusBar.setHidden(true);
-    
         // Clean up on component unmount
         return () => {
           // Show the status bar when the component is unmounted
