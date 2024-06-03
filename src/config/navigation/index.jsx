@@ -10,6 +10,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import HomeScreen from '../../screens/app/home';
 import SearchScreen from '../../screens/app/search';
 import WatchListScreen from '../../screens/app/watchlist';
+import FlowerDetailsScreen from '../../screens/app/watchlist/detailScreen';
 import AccountScreen from '../../screens/app/account';
 import VideoDownloader from '../../screens/app/rnfs';
 import Login from '../../screens/app/auth';
@@ -131,7 +132,7 @@ const AppNavigator = () => {
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <MainStack.Navigator
           screenOptions={{
-            ...TransitionPresets.SlideFromRightIOS,
+            // ...TransitionPresets.SlideFromRightIOS,
             // headerStyle: {
             //   backgroundColor: '#fff',
             // },
@@ -157,6 +158,13 @@ const AppNavigator = () => {
             component={VideoDetail}
             options={{ title: 'Video Details' ,
             headerShown:false
+          }}
+          />
+          <MainStack.Screen
+            name="flowerDetails"
+            component={FlowerDetailsScreen}
+            options={{ title: 'Flower Details' ,
+            headerShown:true
           }}
           />
         </MainStack.Navigator>

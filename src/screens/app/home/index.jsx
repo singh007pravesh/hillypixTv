@@ -38,10 +38,10 @@ const Home = props => {
         'https://m.media-amazon.com/images/M/MV5BZjkwN2Q5Y2QtMmE2MC00NzlkLTg2NzQtYjVjYjVmNjE2ZTNiXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg',
     },
     {
-      name: 'Mai Tera Rasta Dekhunga : Dunki',
-      videoUrl: 'https://hdvideo9.com/files/download/type/HD_720p/id/9683',
+      name: 'Dil Darian - kambi rajpuria',
+      videoUrl: 'https://hdvideo9.com/files/download/type/HD_720p/id/10068',
       imageUrl:
-        'https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2023/12/23/dunki_poster_1_0.jpg',
+        'https://hdvideo9.com/siteuploads/thumb/sft21/10068_resize2x_320x180.webp',
     },
     {
       name: 'Tera Rang Mahbob Da : Fighter',

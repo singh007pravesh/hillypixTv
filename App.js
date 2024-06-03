@@ -9,12 +9,12 @@ import AppNavigator from './src/config/navigation'
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#000' }}>
-      <StatusBar backgroundColor="#000" barStyle="light-content" />
+    // <SafeAreaView style={{ flex: 1, backgroundColor: '#000' }}>
+    //   <StatusBar backgroundColor="#000" barStyle="light-content" />
       <View style={{ flex: 1 }}>
         <AppNavigator />
       </View>
-    </SafeAreaView>
+    // </SafeAreaView>
 
   )
 };
