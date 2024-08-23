@@ -16,11 +16,12 @@ import VideoDownloader from '../../screens/app/rnfs';
 import Login from '../../screens/app/auth';
 import Signup from '../../screens/app/auth/signup';
 import VideoDetail from '../../screens/app/videoDetails';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
 
 
 
-const MainStack = createStackNavigator();
+const MainStack = createSharedElementStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -163,7 +164,11 @@ const AppNavigator = () => {
           <MainStack.Screen
             name="flowerDetails"
             component={FlowerDetailsScreen}
-            options={{ title: 'Flower Details' ,
+            sharedElements={(route, otherRoute, showing) => {
+              const { flower } = route.params;
+              return [`image`];
+            }} 
+            options={{ title: 'Flower Details',
             headerShown:true
           }}
           />

@@ -126,7 +126,7 @@ const VideoComponent = props => {
   return (
     <View style={styles.containerMain}>
       <MenuProvider>
-      {/* <StatusBar hidden={true} /> */}
+      <StatusBar hidden={true} />
       <Pressable
         activeOpacity={1}
         style={styles.playerContainer}
@@ -446,8 +446,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     padding: 0, // Adjust as per your design
     borderWidth:1,
-    borderColor:'yellow',
-    width:'100%'
+    // borderColor:'yellow',
+    // width:'100%'
   },
   playerContainer: {
     flex: 1,

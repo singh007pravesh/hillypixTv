@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
-import Animated from 'react-native-reanimated';
+import { SharedElement } from 'react-navigation-shared-element';
 
-const FlowerDetailsScreen = (props) => {
-  // Rose flower details
-  console.log('==========', props.route.params)
-
-  const flower = props.route.params.flower;
+const FlowerDetailsScreen = ({ route }) => {
+  const { flower } = route.params;
 
   return (
     <View style={styles.container}>
-      <Animated.Image source={{ uri: flower.image }} style={styles.image} sharedTransitionTag={`image${flower.id}`}/>
+      <SharedElement id={`image`}>
+        <Image source={{ uri: flower.image }} style={styles.image} />
+      </SharedElement>
       <Text style={styles.name}>{flower.name}</Text>
       <Text style={styles.details}>{flower.description}</Text>
     </View>
@@ -20,14 +19,12 @@ const FlowerDetailsScreen = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    // justifyContent: 'center',
+    // alignItems: 'center',
     backgroundColor: '#fff',
   },
   image: {
     width: '100%',
-    height: '20%',
-    backgroundColor: 'gainsboro',
+    height: 300,
   },
   name: {
     fontSize: 24,
@@ -37,6 +34,7 @@ const styles = StyleSheet.create({
   details: {
     fontSize: 16,
     textAlign: 'center',
+    padding: 10,
   },
 });
 
